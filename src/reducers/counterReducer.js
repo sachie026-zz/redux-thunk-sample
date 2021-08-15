@@ -3,9 +3,10 @@ const initialState = {
 }
 
 const countReducer = (state = initialState, action) => {
-    switch(action){
+    switch(action.type){
         case 'INC':
             return {
+                ...state,
                 count: action.payload
             }
         case 'GET':    
